@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pix - Copiar Email</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      border: 2px solid gold;
+      padding: 15px 25px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .email {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn-copy {
+      background-color: orange;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-copy:hover {
+      background-color: darkorange;
+    }
+
+    .pix-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .logo-footer {
+      width: 28px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="email">marcinoiva@gmail.com</span>
+    <button class="btn-copy" onclick="copiarEmail()">Copiar</button>
+    <img src="iconepix.jpg" alt="Pix" class="pix-icon">
+  </div>
+
+  <footer>
+    <img src="logor.png" alt="Logo" class="logo-footer">
+    <span>© 2025 Rogério Estumano</span>
+  </footer>
+
+  <script>
+    function copiarEmail() {
+      const email = "marcinoiva@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email copiado: " + email);
+      });
+    }
+  </script>
+</body>
+</html>
+
